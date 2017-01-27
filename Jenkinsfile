@@ -2,22 +2,13 @@
 
 // simple Jenkinsfile to pull source and build
 
-pipeline {
-    agent any 
-        
-        stages {
-            stage('source') {
-                steps {
-                    checkout scm
-                }
-            }
-            stage('build') {
-                steps {
-                   sh "gradle build"
-                }
-            }
-                
-        }
-    
+node {
+       stage('source') {
+          checkout scm
+       }
+       stage('build') {
+          sh "gradle build"
+       }
+         
 }
    

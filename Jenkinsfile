@@ -1,6 +1,6 @@
 #!groovy
 
-# simple Jenkinsfile to pull source and build
+// simple Jenkinsfile to pull source and build
 
 pipeline {
     agent any 
